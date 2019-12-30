@@ -18,7 +18,7 @@
     <item row="0" column="2">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="MapTab">
        <attribute name="title">
@@ -70,7 +70,7 @@
          <widget class="QLineEdit" name="Arrival_Line"/>
         </item>
         <item row="11" column="0">
-         <widget class="QLCDNumber" name="lcdNumber">
+         <widget class="QLCDNumber" name="Arr_Lcd">
           <property name="value" stdset="0">
            <double>10.000000000000000</double>
           </property>
@@ -126,7 +126,7 @@
          </widget>
         </item>
         <item row="11" column="1">
-         <widget class="QDial" name="dial">
+         <widget class="QDial" name="arr_dial">
           <property name="maximumSize">
            <size>
             <width>50</width>
@@ -435,6 +435,22 @@
     <hint type="destinationlabel">
      <x>187</x>
      <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>arr_dial</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>Arr_Lcd</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>662</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>662</y>
     </hint>
    </hints>
   </connection>
